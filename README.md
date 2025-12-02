@@ -246,4 +246,85 @@ python steam_id_merge.py
 </div>
 
 </body>
+
+<div class="section">
+<h2>How To Replicate This Project</h2>
+
+<h3>1. Install Required Software</h3>
+<ul>
+    <li>Install Python 3.10 or newer</li>
+    <li>Install DuckDB</li>
+    <li>Ensure pip is available</li>
+</ul>
+
+<h3>2. Install Required Python Libraries</h3>
+<pre>
+pip install pandas duckdb requests
+</pre>
+
+<h3>3. Obtain the Raw Data Files</h3>
+<p>
+Place the following files in the project root directory:
+</p>
+<ul>
+    <li>games.json</li>
+    <li>franchises.json</li>
+    <li>genres.json</li>
+    <li>external_games.csv</li>
+</ul>
+
+<h3>4. Clean the JSON Data</h3>
+<p>Run the cleaning script to convert string-based lists into integer arrays:</p>
+<pre>
+python clean_data.py
+</pre>
+<p>This will generate:</p>
+<ul>
+    <li>cleaned_games.json</li>
+    <li>cleaned_franchises.json</li>
+</ul>
+
+<h3>5. Create and Populate the Database</h3>
+<pre>
+python create_database.py
+</pre>
+<p>This creates the DuckDB database file:</p>
+<ul>
+    <li>games.duckdb</li>
+</ul>
+
+<h3>6. Calculate Franchise Lifespans</h3>
+<pre>
+python calculate_lifespan.py
+</pre>
+<p>This computes and stores franchise durations in years.</p>
+
+<h3>7. Assign Franchise Dominant Genres</h3>
+<pre>
+python assign_franchise_genre.py
+</pre>
+<p>This computes the majority genre for each franchise.</p>
+
+<h3>8. Merge Steam IDs</h3>
+<pre>
+python steam_id_merge.py
+</pre>
+<p>This adds Steam application IDs to the games table.</p>
+
+<h3>9. Verify Using the Steam API (Optional)</h3>
+<pre>
+https://store.steampowered.com/api/appdetails?appids=730
+</pre>
+
+<h3>10. Query the Final Database</h3>
+<pre>
+import duckdb
+con = duckdb.connect("games.duckdb")
+</pre>
+
+<p>
+At this point, the project is fully reproduced and ready for analysis.
+</p>
+</div>
+
 </html>
