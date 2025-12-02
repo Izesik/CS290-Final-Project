@@ -1,10 +1,10 @@
 import pandas as pd
 
 def main():
-    cleanJSON('franchises.json', 'games')
+    cleanFranchises('franchises.json', 'games')
     cleanGames()
 
-def cleanJSON(fileName, column):
+def cleanFranchises(fileName, column):
     df = pd.read_json(fileName)
     df[column] = df[column].str.replace("{", "").str.replace("}", "").str.split(",")
     df[column] = df[column].apply(lambda x: [int(i) for i in x] if x is not None else None)
