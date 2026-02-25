@@ -2,42 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Video Game Franchise Data Wrangling Project</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            line-height: 1.6;
-            background-color: #000000;   /* BLACK background */
-            color: #ffffff;              /* WHITE text */
-        }
-        h1, h2, h3 {
-            border-bottom: 2px solid #ffffff;
-            padding-bottom: 4px;
-            color: #ffffff;
-        }
-        code, pre {
-            background-color: #111111;
-            color: #ffffff;
-            padding: 10px;
-            display: block;
-            overflow-x: auto;
-            margin: 10px 0;
-            border: 1px solid #ffffff;
-        }
-        ul {
-            margin-left: 25px;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-    </style>
+ 
 </head>
 <body>
 
 <h1>Video Game Franchise Data Wrangling Project</h1>
 <p><strong>Course:</strong> Data Wrangling<br>
-<strong>Student:</strong> Ryan Demarest<br>
+<strong>Students:</strong> Ryan Demarest & Isaac Nunez <br>
 <strong>Final Project</strong></p>
 
 <div class="section">
